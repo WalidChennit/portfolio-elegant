@@ -42,6 +42,36 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'elearning-coaching-platform',
+    name: 'E-Learning Coaching Platform',
+    org: 'Private Client',
+    period: 'Present',
+    status: 'Active',
+    statusFr: 'Actif',
+    sector: 'EdTech',
+    sectorFr: 'EdTech',
+    summary:
+      'A full-stack school coaching platform currently in development — personalized study programs, quizzes, mock exams, teacher video-session booking, and parent/institution tracking dashboards, bilingual French/Arabic (RTL).',
+    summaryFr:
+      "Une plateforme full-stack de coaching scolaire actuellement en développement — programmes de révision personnalisés, quiz, examens blancs, réservation de séances vidéo avec des enseignants, et tableaux de bord de suivi pour parents et établissements, bilingue français/arabe (RTL).",
+    highlights: [
+      'Next.js frontend, NestJS modular REST APIs, PostgreSQL + Prisma.',
+      'Multi-role platform: students, teachers, parents, institutions and admin.',
+      'Adaptive learning: progress tracking, weak-point detection, auto-graded quizzes and mock exams.',
+      'Teacher scheduling and video-session booking workflow.',
+      'Bilingual interface with full French / Arabic (RTL) support.',
+    ],
+    highlightsFr: [
+      'Frontend Next.js, APIs REST modulaires NestJS, PostgreSQL + Prisma.',
+      'Plateforme multi-rôles : élèves, enseignants, parents, établissements et administration.',
+      "Apprentissage adaptatif : suivi de progression, détection des points faibles, quiz et examens blancs corrigés automatiquement.",
+      'Planification enseignant et réservation de séances vidéo.',
+      'Interface bilingue avec support complet français / arabe (RTL).',
+    ],
+    stack: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'i18n / RTL'],
+    images: [],
+  },
+  {
     slug: 'virtual-bank',
     name: 'Virtual Bank',
     org: 'Diar Dzair',
