@@ -231,7 +231,7 @@ export const PROJECTS: Project[] = [
       'Accès par rôle : comptes administrateur, personnel et étudiant.',
       'Tableau de bord de gestion des comptes et du contenu.',
     ],
-    stack: ['Next.js', 'Vercel'],
+    stack: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL', 'REST', 'RBAC', 'Vercel'],
     demoUrl: 'https://biblio-sphere-delta.vercel.app',
     demoAccounts: [
       { role: 'Admin', email: 'admin@bibliosphere.test', pass: 'Test1234!' },
