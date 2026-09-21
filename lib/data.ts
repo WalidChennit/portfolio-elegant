@@ -184,6 +184,31 @@ export const PROJECTS: Project[] = [
     images: [],
   },
   {
+    slug: 'brainerx-formation-finder',
+    name: 'BrainerX Formation Finder',
+    org: 'BrainerX',
+    period: 'Present',
+    status: 'Live',
+    statusFr: 'En ligne',
+    sector: 'Education',
+    sectorFr: 'Éducation',
+    summary:
+      'A test website that helps students figure out which BrainerX course track fits them best, through a short guided assessment.',
+    summaryFr:
+      "Un site de test qui aide les étudiants à déterminer quelle formation BrainerX leur correspond le mieux, à travers une évaluation guidée courte.",
+    highlights: [
+      'Guided questionnaire to match a student profile to the right course track.',
+      'Simple, fast, deployed as a standalone test site.',
+    ],
+    highlightsFr: [
+      'Questionnaire guidé pour orienter chaque étudiant vers la bonne formation.',
+      'Simple et rapide, déployé comme site de test autonome.',
+    ],
+    stack: ['Next.js', 'Netlify'],
+    demoUrl: 'https://test-brainerx.netlify.app/',
+    images: [],
+  },
+  {
     slug: 'ekyc-vault',
     name: 'e-KYC Vault',
     org: "Crédit Populaire d'Algérie",
