@@ -475,7 +475,7 @@ export const LANGUAGES = [
 ];
 
 export const STATS = [
-  { n: '8', label: 'Projects delivered', labelFr: 'Projets réalisés' },
-  { n: '6', label: 'Clients & organizations', labelFr: 'Clients & organisations' },
+  { n: '8+', label: 'Projects delivered', labelFr: 'Projets réalisés' },
+  { n: '6+', label: 'Clients & organizations', labelFr: 'Clients & organisations' },
   { n: '2+', label: 'Years of full-stack delivery', labelFr: 'Années en full-stack' },
 ];
