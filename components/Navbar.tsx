@@ -60,23 +60,35 @@ export default function Navbar() {
           </button>
         </nav>
 
-        <button
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-border-strong md:hidden"
-        >
-          <span className="sr-only">Menu</span>
-          {open ? (
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-              <path d="M4 4l16 16M20 4L4 20" />
-            </svg>
-          ) : (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-              <path d="M3 6h18M3 12h18M3 18h18" />
-            </svg>
-          )}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            type="button"
+            onClick={toggleLang}
+            aria-label="Toggle language"
+            className="flex h-9 items-center gap-1 rounded-full border border-border-strong px-3 text-[12px] font-medium text-muted"
+          >
+            <span className={lang === 'en' ? 'text-accent' : ''}>EN</span>
+            <span className="text-border-strong">/</span>
+            <span className={lang === 'fr' ? 'text-accent' : ''}>FR</span>
+          </button>
+          <button
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border-strong"
+          >
+            <span className="sr-only">Menu</span>
+            {open ? (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M4 4l16 16M20 4L4 20" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M3 6h18M3 12h18M3 18h18" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -104,15 +116,6 @@ export default function Navbar() {
             >
               {downloadResumeLabel}
             </a>
-            <button
-              type="button"
-              onClick={toggleLang}
-              className="mt-1 flex items-center justify-center gap-1 rounded-lg border border-border-strong px-4 py-3 text-sm text-muted"
-            >
-              <span className={lang === 'en' ? 'text-accent' : ''}>EN</span>
-              <span className="text-border-strong">/</span>
-              <span className={lang === 'fr' ? 'text-accent' : ''}>FR</span>
-            </button>
           </nav>
         </div>
       )}

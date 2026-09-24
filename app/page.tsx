@@ -57,7 +57,7 @@ export default function HomePage() {
           </p>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="font-serif-display mt-5 max-w-3xl text-[42px] leading-[1.08] tracking-tight text-foreground md:text-[64px]">
+          <h1 className="font-serif-display mt-5 max-w-3xl text-[34px] leading-[1.1] tracking-tight text-foreground sm:text-[42px] md:text-[64px]">
             {t.heroHeadline}
           </h1>
         </Reveal>

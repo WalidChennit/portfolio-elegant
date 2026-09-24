@@ -11,7 +11,7 @@ const COPY = {
     work: 'Work',
     heading: 'Selected projects',
     subtitle:
-      'Six engagements across banking, scientific research and education — each shipped end-to-end, from architecture to production.',
+      'Eight projects for six clients and organizations across banking, research, education and edtech — each shipped end-to-end, from architecture to production.',
     viewLiveDemo: 'View Live Demo ↗',
     demoAccounts: 'Demo accounts',
     hideDemoAccounts: 'Hide demo accounts',
@@ -25,7 +25,7 @@ const COPY = {
     work: 'Travaux',
     heading: 'Projets sélectionnés',
     subtitle:
-      "Six missions entre banque, recherche scientifique et éducation — chacune livrée de bout en bout, de l'architecture à la production.",
+      "Huit projets pour six clients et organisations dans la banque, la recherche, l'éducation et l'edtech — chacun livré de bout en bout, de l'architecture à la production.",
     viewLiveDemo: 'Voir la démo en direct ↗',
     demoAccounts: 'Comptes de démo',
     hideDemoAccounts: 'Masquer les comptes de démo',
@@ -81,8 +81,8 @@ export default function ProjectsPage() {
         {PROJECTS.map((p, i) => (
           <Reveal key={p.slug} delay={Math.min(i * 60, 240)}>
             <article className="overflow-hidden rounded-2xl border border-border bg-surface">
-              <div className="grid md:grid-cols-[280px_1fr]">
-                <div className="border-b border-border p-7 md:border-b-0 md:border-r">
+              <div className="grid grid-cols-1 md:grid-cols-[280px_1fr]">
+                <div className="border-b border-border p-5 sm:p-7 md:border-b-0 md:border-r">
                   <div className="text-xs font-medium uppercase tracking-widest text-muted-2">{p.period}</div>
                   <h2 className="font-serif-display mt-3 text-2xl text-foreground">{p.name}</h2>
                   <div className="mt-1 text-sm text-muted">{p.org}</div>
@@ -102,7 +102,7 @@ export default function ProjectsPage() {
                   </div>
                 </div>
 
-                <div className="p-7">
+                <div className="min-w-0 p-5 sm:p-7">
                   <p className="max-w-2xl text-[16px] leading-relaxed text-foreground">
                     {lang === 'fr' ? p.summaryFr : p.summary}
                   </p>
@@ -172,7 +172,22 @@ export default function ProjectsPage() {
                       </div>
 
                       {p.demoAccounts && openDemo === p.slug && (
-                        <div className="mt-4 overflow-hidden rounded-xl border border-border">
+                        <div className="mt-4 space-y-2 sm:hidden">
+                          {p.demoAccounts.map((a) => (
+                            <div key={a.email} className="rounded-xl border border-border p-3 text-xs">
+                              <div className="font-medium text-accent">{a.role}</div>
+                              <div className="mt-1.5 break-all text-foreground">{a.email}</div>
+                              <div className="mt-0.5 break-all text-muted">
+                                <span className="text-muted-2">{t.password} : </span>
+                                {a.pass}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {p.demoAccounts && openDemo === p.slug && (
+                        <div className="mt-4 hidden overflow-x-auto rounded-xl border border-border sm:block">
                           <table className="w-full text-left text-xs">
                             <thead>
                               <tr className="bg-accent-soft text-muted-2">
